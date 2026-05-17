@@ -42,3 +42,7 @@ In `~/.config/solaar/rules.yaml`:
 You *must* restart Solaar for it to pick up the configuration file change.
 
 ![Solaar rule editor](https://github.com/caprica/mx-keys-s-linux/raw/master/etc/solaar-rule-editor.png "Solaar rule editor")
+
+## Summary
+
+Now the `Print` key for the whole screen, the `alt` modifier for the current window, and the `shift` modifier for a selection, will all work properly.
