@@ -12,9 +12,11 @@ Fixing the issue is not straightforward because Solaar does not seem to work qui
 
 Unlbock the `Key/Button Diversion` option, locate `Snipping Tool` and set it to `Diverted`.
 
+On newer versions of Solaar instead of `Snipping Tool` you may need to use `Screen Capture`.
+
 This will cause the keyboard to send HID++ notifications for this key.
 
-Note that this keypress will *not* show up in e.g. `xev`, but Solaar can detect it via its custom rules.
+Note that this keypress might *not* show up in e.g. `xev`, but Solaar can detect it via its custom rules.
 
 The settings should look like this:
 
@@ -33,6 +35,19 @@ In `~/.config/solaar/rules.yaml`:
 ---
 - Rule:
   - Key: [Snipping Tool, pressed]
+  - KeyPress:
+    - Print
+    - click
+...
+```
+
+Or if you used `Screen Capture` instead:
+
+```yaml
+%YAML 1.3
+---
+- Rule:
+  - Key: [Screen Capture, pressed]
   - KeyPress:
     - Print
     - click
